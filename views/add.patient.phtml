@@ -1,0 +1,47 @@
+<!-- Display adding new patient page -->
+<section class="container fluid">
+      <h2 class="text-center py-3">Ajouter un nouveau patient</h2>
+            <form action="addPatient.php" method="POST">
+                  <div class="row">
+                        <div class="input-group mb-3">
+                              <span class="input-group-text" id="basic-addon1">Nom</span>
+                              <input type="text" class="form-control" 
+                              name="lastname" 
+                              placeholder="Nom" aria-label="Lastname" aria-describedby="basic-addon1">
+                        </div>
+                  </div>
+                  <div class="row">
+                        <div class="input-group mb-3">
+                              <span class="input-group-text" id="basic-addon1">Prénom</span>
+                              <input type="text" class="form-control" 
+                              name="firstname" 
+                              placeholder="Prénom" aria-label="Firstname" aria-describedby="basic-addon1">
+                        </div>
+                  </div>
+                  <div class="row">
+                        <div class="input-group mb-3">
+                              <span class="input-group-text" id="basic-addon1">Date de naissance</span>
+                              <input type="date" class="form-control" 
+                              name="birthdate" placeholder="Date de naissance" aria-label="Birthdate" aria-describedby="basic-addon1">
+                        </div>
+                  </div>
+                  <div class="row">
+                        <div class="input-group mb-3">
+                              <span class="input-group-text" id="basic-addon1">Tél</span>
+                              <input type="phone" class="form-control" 
+                              name="phone" 
+                              placeholder="Numéro de téléphone" aria-label="Phone" aria-describedby="basic-addon1">
+                        </div>
+                  </div>
+                  <div class="row">
+                        <div class="input-group mb-3">
+                              <span class="input-group-text" id="basic-addon1">Email</span>
+                              <input type="email" class="form-control" 
+                              name="mail" id="exampleFormControlInput1" placeholder="Exemple@example.com">
+                        </div>
+                  </div>
+                  <div class="row d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary justify w-25" name="submit" >Valider</button>
+                  </div>
+            </form>
+</section>

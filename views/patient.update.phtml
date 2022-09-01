@@ -1,0 +1,59 @@
+<!-- Display patient updating page -->
+<section class="container fluid">
+      <h2 class="text-center py-3">Modification des données personnelles <?= $patient['firstname'].' '.$patient['lastname']?></h2>
+      <form action="updatePatient.php" method="POST">
+            <input type="hidden" name="id" value="<?= $id;?>">
+            <div class="row">
+                  <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Nom</span>
+                        <input type="text" class="form-control" 
+                        name="lastname" 
+                        value="<?= $patient['lastname'];?>" 
+                        placeholder="Nom" aria-label="Lastname" aria-describedby="basic-addon1">
+                  </div>
+            </div>
+            <div class="row">
+                  <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Prénom</span>
+                        <input type="text" class="form-control" 
+                        name="firstname" 
+                        value="<?= $patient['firstname'];?>" 
+                        placeholder="Prénom" aria-label="Firstname" aria-describedby="basic-addon1">
+                  </div>
+            </div>
+            <div class="row">
+                  <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Date de naissance</span>
+                        <input type="date" class="form-control" 
+                        name="birthdate" 
+                        value="<?= $patient['birthdate'];?>" 
+                        placeholder="Date de naissance" aria-label="Birthdate" aria-describedby="basic-addon1">
+                  </div>
+            </div>
+            <div class="row">
+                  <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Tél</span>
+                        <input type="phone" class="form-control" 
+                        name="phone" 
+                        value="<?= $patient['phone'];?>"
+                        placeholder="Numéro de téléphone" 
+                        aria-label="Phone" aria-describedby="basic-addon1">
+                  </div>
+            </div>
+            <div class="row">
+                  <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Email</span>
+                        <input type="email" class="form-control" 
+                        name="mail" 
+                        id="exampleFormControlInput1" 
+                        placeholder="Exemple@example.com"
+                        value="<?= $patient['mail'];?>">
+                  </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                  <button type="submit" class="btn btn-primary justify w-25" name="submit" >Valider</button>
+            </div>
+      </form>
+</section>
+
+

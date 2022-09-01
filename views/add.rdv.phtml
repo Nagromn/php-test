@@ -1,0 +1,40 @@
+<!-- Adding rdv for registered patient page -->
+<section class="container fluid">
+      <h2 class="text-center py-3">Prendre un rendez-vous</h2>
+      <form action="addRdv.php" method="POST">
+            <div class="row">
+                  <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Rendez-vous</span>
+                        <input type="date" class="form-control" 
+                        name="date" placeholder="Date" aria-label="Date" aria-describedby="basic-addon1">
+                  </div>
+            </div>
+            <div class="row">
+                  <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Heure</span>
+                        <input type="time" class="form-control" 
+                        name="time" min="09:00" max="18:00" placeholder="Date" aria-label="Date" aria-describedby="basic-addon1">
+                        <div class="d-flex text-primary p-2">
+                              <label for="time">Veuillez choisir une heure entre 09H00 et 18H00.</label>
+                        </div>
+                  </div>
+            </div>
+            <div class="row">
+                  <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Patient</span>
+                        <select name="idPatients" 
+                        class="form-control"
+                        placeholder="Patient" 
+                        aria-label="Patient" aria-describedby="basic-addon1" >
+                              <option value="">-</option>
+                              <?php foreach($patients as $patient): ?>
+                                    <option value="<?= $patient['id'];?>"><?= $patient['firstname'].' '.$patient['lastname'];?></option>
+                              <?php endforeach ?>
+                        </select>
+                  </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                  <button type="submit" class="btn btn-primary justify w-25" name="submit" >Valider</button>
+            </div>
+      </form>
+</section>

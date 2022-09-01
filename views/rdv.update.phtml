@@ -1,0 +1,30 @@
+<!-- Display rdv updating page -->
+<section class="container fluid">
+      <h2 class="text-center py-3">Modification du RDV</h2>
+      <form action="updateRdv.php" method="POST">
+            <input type="hidden" name="id" value="<?= $id;?>">
+            <div class="row">
+                  <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Date</span>
+                        <input type="date" class="form-control" 
+                        name="date" 
+                        value="<?= $appointment['dateHour'];?>" 
+                        placeholder="Date" aria-label="Date" aria-describedby="basic-addon1">
+                  </div>
+            </div>
+            <div class="row">
+                  <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">Heure</span>
+                        <input type="time" class="form-control" 
+                        name="time" min="09:00" max="18:00" 
+                        placeholder="Date" aria-label="Date" aria-describedby="basic-addon1">
+                        <div class="d-flex text-primary p-2">
+                              <label for="time">Veuillez choisir une heure entre 09H00 et 18H00.</label>
+                        </div>
+                  </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                  <button type="submit" class="btn btn-primary justify w-25" name="submit" >Valider</button>
+            </div>
+      </form>
+</section>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title><?= $pageTitle ?></title>
+      <!-- STYLE PART -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+</head>
+<body>
+      <!-- HEADER PART -->
+      <div class="container-fluid">
+            <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom top-fixed">
+                  <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                        <span class="fs-4"></span>
+                  </a>
+                  <ul class="nav nav-pills">
+                        <li class="nav-item">
+                              <a href="home.php" class="nav-link active" aria-current="page">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                              <a href="addPatient.php" class="nav-link">Ajouter patient</a>
+                        </li>
+                        <li class="nav-item">
+                              <a href="addPatientRdv.php" class="nav-link">Ajouter patient et RDV</a>
+                        </li>
+                        <li class="nav-item">
+                              <a href="listPatient.php" class="nav-link">Liste des patients</a>
+                        </li>
+                        <li class="nav-item">
+                              <a href="addRdv.php" class="nav-link">Prendre RDV</a>
+                        </li>
+                        <li class="nav-item">
+                              <a href="listRdv.php" class="nav-link">Liste des RDV</a>
+                        </li>
+                  </ul>
+            </header>
+
+            <!-- MAIN PART -->
+            <main class="container fluid">
+                  <?= $pageContent ?>
+            </main>
+
+            <!-- FOOTER PART -->
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top bottom-fixed">
+                  <p class="col-md-4 mb-0 text-muted">&copy; 2022 Company, Inc</p>
+                  <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none"><svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+                  </a>
+                  <ul class="nav col-md-4 justify-content-end">
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Accueil</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+                  </ul>
+            </footer>
+      </div>
+
+      <!-- SCRIPT PART -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
